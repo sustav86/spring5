@@ -1,5 +1,6 @@
 package com.sustav.devtool;
 
+import com.sustav.devtool.dao.SequenceDao;
 import com.sustav.devtool.entity.SequenceGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -32,5 +33,9 @@ public class DevtoolApplication implements CommandLineRunner {
 		System.out.println(sequenceGenerator.getSequence());
 		System.out.println(sequenceGenerator.getSequence());
 		System.out.println(sequenceGenerator.getSequence());
+
+		SequenceDao bean = context.getBean(SequenceDao.class);
+		System.out.println(bean.getNextValue("IT"));
+		System.out.println(bean.getNextValue("IT"));
 	}
 }
