@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Data
 public class SequenceGenerator {
 
-    @Autowired
+//    @Autowired
 //    @Qualifier("customPrefixGenerator")
     private PrefixGenerator prefixGenerator;
     private String prefix;
