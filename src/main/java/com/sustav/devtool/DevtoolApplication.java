@@ -4,11 +4,13 @@ import com.sustav.devtool.dao.SequenceDao;
 import com.sustav.devtool.entity.BannerLoader;
 import com.sustav.devtool.entity.Product;
 import com.sustav.devtool.entity.SequenceGenerator;
+import com.sustav.devtool.entity.TerminatorQuoter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
 public class DevtoolApplication implements CommandLineRunner {
@@ -22,6 +24,11 @@ public class DevtoolApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		ClassPathXmlApplicationContext contextXml = new ClassPathXmlApplicationContext("appConfig.xml");
+		contextXml.setParent(context);
+//		contextXml.refresh();
+//		contextXml.registerShutdownHook();
+		String[] beanDefinitionNamesXml = contextXml.getBeanDefinitionNames();
 		String[] beanDefinitionNames = context.getBeanDefinitionNames();
 
 //		by Name
@@ -48,5 +55,7 @@ public class DevtoolApplication implements CommandLineRunner {
 
 //		BannerLoader bean = context.getBean(BannerLoader.class);
 
+		TerminatorQuoter bean = contextXml.getBean(TerminatorQuoter.class);
+		bean.sayQuote();
 	}
 }
