@@ -53,7 +53,7 @@ public class DevtoolApplication implements CommandLineRunner {
 //		BannerLoader bean = context.getBean(BannerLoader.class);
 
 		Quoter bean = contextXml.getBean(Quoter.class);
-//		bean.sayQuote();
+		bean.sayQuote();
 //		while (true) {
 //			Thread.sleep(1000);
 //			bean.sayQuote();
