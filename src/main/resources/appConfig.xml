@@ -4,15 +4,17 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <bean class="com.sustav.devtool.springinside.ProfilingHandlerBeanPostProcessor"/>
+
     <!--<context:component-scan base-package="com.sustav"/>-->
     <!--except-->
-    <!--<context:annotation-config/>-->
+    <context:annotation-config/>
     <!--except-->
-    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+    <!--<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
 
-    <bean class="com.sustav.devtool.entity.InjectRandomIntAnnotationBeanPostProcessor"/>
+    <bean class="com.sustav.devtool.springinside.InjectRandomIntAnnotationBeanPostProcessor"/>
 
-    <bean class="com.sustav.devtool.entity.TerminatorQuoter" id="terminatorQuoter">
+    <bean class="com.sustav.devtool.springinside.TerminatorQuoter" id="terminatorQuoter">
         <property name="message" value="I'll be back!"/>
     </bean>
 

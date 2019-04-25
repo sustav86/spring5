@@ -1,7 +1,8 @@
-package com.sustav.devtool.entity;
+package com.sustav.devtool.springinside;
 
 import javax.annotation.PostConstruct;
 
+@Profiling
 public class TerminatorQuoter implements Quoter {
 
     @InjectRandomInt(min = 2, max = 7)
@@ -24,6 +25,7 @@ public class TerminatorQuoter implements Quoter {
     }
 
     @Override
+    @PostConstruct
     public void sayQuote() {
         for (int i = 0; i < repeat; i++) {
             System.out.println("Message: " + message);

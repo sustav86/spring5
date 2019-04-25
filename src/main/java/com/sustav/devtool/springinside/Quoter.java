@@ -1,4 +1,4 @@
-package com.sustav.devtool.entity;
+package com.sustav.devtool.springinside;
 
 public interface Quoter {
     void sayQuote();

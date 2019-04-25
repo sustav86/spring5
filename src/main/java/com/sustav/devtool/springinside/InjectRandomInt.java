@@ -1,4 +1,4 @@
-package com.sustav.devtool.entity;
+package com.sustav.devtool.springinside;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

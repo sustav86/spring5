@@ -1,10 +1,7 @@
 package com.sustav.devtool;
 
-import com.sustav.devtool.dao.SequenceDao;
-import com.sustav.devtool.entity.BannerLoader;
-import com.sustav.devtool.entity.Product;
-import com.sustav.devtool.entity.SequenceGenerator;
-import com.sustav.devtool.entity.TerminatorQuoter;
+import com.sustav.devtool.springinside.Quoter;
+import com.sustav.devtool.springinside.TerminatorQuoter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -55,7 +52,11 @@ public class DevtoolApplication implements CommandLineRunner {
 
 //		BannerLoader bean = context.getBean(BannerLoader.class);
 
-		TerminatorQuoter bean = contextXml.getBean(TerminatorQuoter.class);
+		Quoter bean = contextXml.getBean(Quoter.class);
 		bean.sayQuote();
+//		while (true) {
+//			Thread.sleep(1000);
+//			bean.sayQuote();
+//		}
 	}
 }

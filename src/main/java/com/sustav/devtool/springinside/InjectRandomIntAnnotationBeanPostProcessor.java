@@ -1,4 +1,4 @@
-package com.sustav.devtool.entity;
+package com.sustav.devtool.springinside;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
