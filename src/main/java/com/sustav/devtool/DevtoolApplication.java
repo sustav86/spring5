@@ -1,6 +1,7 @@
 package com.sustav.devtool;
 
 import com.sustav.devtool.dao.SequenceDao;
+import com.sustav.devtool.entity.BannerLoader;
 import com.sustav.devtool.entity.Product;
 import com.sustav.devtool.entity.SequenceGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,10 +31,10 @@ public class DevtoolApplication implements CommandLineRunner {
 //		System.out.println(sequenceGenerator.getSequence());
 
 //		by Type
-		SequenceGenerator sequenceGenerator = context.getBean(SequenceGenerator.class);
-		System.out.println(sequenceGenerator.getSequence());
-		System.out.println(sequenceGenerator.getSequence());
-		System.out.println(sequenceGenerator.getSequence());
+//		SequenceGenerator sequenceGenerator = context.getBean(SequenceGenerator.class);
+//		System.out.println(sequenceGenerator.getSequence());
+//		System.out.println(sequenceGenerator.getSequence());
+//		System.out.println(sequenceGenerator.getSequence());
 
 //		SequenceDao bean = context.getBean(SequenceDao.class);
 //		System.out.println(bean.getNextValue("IT"));
@@ -44,5 +45,8 @@ public class DevtoolApplication implements CommandLineRunner {
 //
 //		System.out.println(battery);
 //		System.out.println(disc);
+
+//		BannerLoader bean = context.getBean(BannerLoader.class);
+
 	}
 }
