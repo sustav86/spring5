@@ -35,14 +35,14 @@ public class DevtoolApplication implements CommandLineRunner {
 		System.out.println(sequenceGenerator.getSequence());
 		System.out.println(sequenceGenerator.getSequence());
 
-		SequenceDao bean = context.getBean(SequenceDao.class);
-		System.out.println(bean.getNextValue("IT"));
-		System.out.println(bean.getNextValue("IT"));
-
-		Product battery = context.getBean("battery", Product.class);
-		Product disc = context.getBean("disc", Product.class);
-
-		System.out.println(battery);
-		System.out.println(disc);
+//		SequenceDao bean = context.getBean(SequenceDao.class);
+//		System.out.println(bean.getNextValue("IT"));
+//		System.out.println(bean.getNextValue("IT"));
+//
+//		Product battery = context.getBean("battery", Product.class);
+//		Product disc = context.getBean("disc", Product.class);
+//
+//		System.out.println(battery);
+//		System.out.println(disc);
 	}
 }
