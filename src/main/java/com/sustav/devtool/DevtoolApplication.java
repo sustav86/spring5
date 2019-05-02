@@ -17,6 +17,7 @@ public class DevtoolApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DevtoolApplication.class, args);
+//		SpringApplication.run(String.class, args);
 	}
 
 	@Override
